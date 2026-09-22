@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金属大师-锻造工艺、材料选择与工业应用指南</title>
+    <meta name="description" content="金属大师专注于金属加工、材料科学与工业应用。提供金属分类、热处理工艺、金属表面处理及行业选材指南，助力工程师与工匠提升品质。">
+    <meta name="keywords" content="金属大师, 金属加工, 材料科学, 热处理, 不锈钢, 铸铁, 金属应用">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-light: #f8f9fa;
+            --text-main: #333;
+            --text-secondary: #666;
+            --border-color: #e1e4e8;
+            --card-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 16px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: #fff;
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background: #d35400;
+            border-color: #d35400;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            padding-right: 50px;
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            outline: none;
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -17px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .section-more {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Grid System */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        /* Cards */
+        .card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 12px;
+            color: var(--accent-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid var(--bg-light);
+            padding-top: 15px;
+        }
+
+        /* Feature Section */
+        .feature-section {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 60px 20px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        /* Material Types */
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .material-card {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 200px;
+            cursor: pointer;
+        }
+
+        .material-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .material-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            color: #fff;
+        }
+
+        .material-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .material-overlay h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        /* Guide Section */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .guide-item {
+            display: flex;
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .guide-thumb {
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .guide-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .guide-content {
+            padding: 25px;
+            flex: 1;
+        }
+
+        .guide-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #ecf0f1;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-grid {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            text-align: center;
+            font-size: 13px;
+            color: #7f8c8d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                padding: 0 15px;
+            }
+            
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .material-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .guide-item {
+                flex-direction: column;
+            }
+
+            .guide-thumb {
+                width: 100%;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="#" class="logo">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-color)">
+                <path d="M6 9l6 6 6-6"/>
+                <path d="M6 15l6 6 6-6"/>
+            </svg>
+            金属<span>大师</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#materials">材料百科</a></li>
+                <li><a href="#processing">加工工艺</a></li>
+                <li><a href="#guide">选型指南</a></li>
+                <li><a href="#industry">行业应用</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#" class="btn btn-outline">登录</a>
+            <a href="#" class="btn btn-primary">注册</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>探索金属的无限可能</h1>
+        <p>从基础材料属性到高端工业应用，金属大师为您提供专业的知识库与选型参考。</p>
+        <div class="search-box">
+            <input type="text" placeholder="搜索材料、工艺或应用场景...">
+            <button>🔍</button>
+        </div>
+    </section>
+
+    <!-- Feature Highlights -->
+    <section class="feature-section">
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-icon">⚙️</div>
+                <h3>热处理技术</h3>
+                <p>淬火、回火与退火工艺详解，优化金属性能。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🧪</div>
+                <h3>材料分析</h3>
+                <p>硬度、韧性及耐腐蚀性的科学检测标准。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🏗️</div>
+                <h3>结构应用</h3>
+                <p>钢结构、铸造与焊接在建筑与机械中的实践。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💎</div>
+                <h3>表面处理</h3>
+                <p>镀层与涂层技术，提升金属的耐用与美观。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Material Classification -->
+    <section id="materials" class="container">
+        <div class="section-header">
+            <h2 class="section-title">常见金属分类</h2>
+            <a href="#" class="section-more">查看全部材料 →</a>
+        </div>
+        <div class="material-grid">
+            <div class="material-card">
+                <img src="https://picsum.photos/seed/steel/400/300" alt="黑色金属">
+                <div class="material-overlay">
+                    <h4>黑色金属</h4>
+                    <p>铁碳合金体系</p>
+                </div>
+            </div>
+            <div class="material-card">
+                <img src="https://picsum.photos/seed/copper/400/300" alt="有色金属">
+                <div class="material-overlay">
+                    <h4>有色金属</h4>
+                    <p>铜、铝、镁等</p>
+                </div>
+            </div>
+            <div class="material-card">
+                <img src="https://picsum.photos/seed/titanium/400/300" alt="贵金属">
+                <div class="material-overlay">
+                    <h4>贵金属</h4>
+                    <p>金、银、铂</p>
+                </div>
+            </div>
+            <div class="material-card">
+                <img src="https://picsum.photos/seed/precious/400/300" alt="稀有金属">
+                <div class="material-overlay">
+                    <h4>稀有金属</h4>
+                    <p>钨、钼、钛</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processing Technology -->
+    <section id="processing" class="container" style="background-color: var(--bg-light);">
+        <div class="section-header">
+            <h2 class="section-title">核心加工工艺</h2>
+            <a href="#" class="section-more">工艺百科 →</a>
+        </div>
+        <div class="grid-3">
+            <article class="card">
+                <img src="https://picsum.photos/seed/welding/600/400" class="card-img" alt="焊接技术">
+                <div class="card-body">
+                    <span class="card-tag">连接技术</span>
+                    <h3 class="card-title">焊接工艺详解</h3>
+                    <p class="card-desc">了解电弧焊、气焊及激光焊接的原理与应用，掌握焊缝质量检测要点。</p>
+                    <div class="card-meta">
+                        <span>阅读: 12k+</span>
+                        <span>更新: 2023-10</span>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://picsum.photos/seed/forge/600/400" class="card-img" alt="锻造工艺">
+                <div class="card-body">
+                    <span class="card-tag">塑性变形</span>
+                    <h3 class="card-title">锻造与冲压</h3>
+                    <p class="card-desc">探讨自由锻与模锻的区别，分析锻造比与金属流线对机械性能的影响。</p>
+                    <div class="card-meta">
+                        <span>阅读: 8.5k+</span>
+                        <span>更新: 2023-09</span>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://picsum.photos/seed/casting/600/400" class="card-img" alt="铸造工艺">
+                <div class="card-body">
+                    <span class="card-tag">成型技术</span>
+                    <h3 class="card-title">精密铸造技术</h3>
+                    <p class="card-desc">砂型铸造与熔模铸造的工艺流程，以及如何减少铸造缺陷与气孔。</p>
+                    <div class="card-meta">
+                        <span>阅读: 10k+</span>
+                        <span>更新: 2023-11</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Selection Guide -->
+    <section id="guide" class="container">
+        <div class="section-header">
+            <h2 class="section-title">选型与使用指南</h2>
+        </div>
+        <div class="guide-list">
+            <div class="guide-item">
+                <div class="guide-thumb">
+                    <img src="https://picsum.photos/seed/building/400/300" alt="建筑钢材">
+                </div>
+                <div class="guide-content">
+                    <span class="card-tag">建筑行业</span>
+                    <h3>建筑用钢材选型指南：从Q235到Q355</h3>
+                    <p style="color:var(--text-secondary); margin-bottom:10px;">在建筑工程中，如何根据载荷需求选择合适的结构钢？本文详细对比了不同碳当量钢材的焊接性能与抗拉强度。</p>
+                    <a href="#" style="color:var(--accent-color); font-weight:600; font-size:14px;">阅读全文 →</a>
+                </div>
+            </div>
+            <div class="guide-item">
+                <div class="guide-thumb">
+                    <img src="https://picsum.photos/seed/car/400/300" alt="汽车制造">
+                </div>
+                <div class="guide-content">
+                    <span class="card-tag">汽车制造</span>
+                    <h3>汽车轻量化材料应用现状：铝合金与碳纤维</h3>
+                    <p style="color:var(--text-secondary); margin-bottom:10px;">随着环保法规的收紧，汽车轻量化成为趋势。深入解析铝合金车身与高强度钢的应用比例及成本控制。</p>
+                    <a href="#" style="color:var(--accent-color); font-weight:600; font-size:14px;">阅读全文 →</a>
+                </div>
+            </div>
+            <div class="guide-item">
+                <div class="guide-thumb">
+                    <img src="https://picsum.photos/seed/food/400/300" alt="食品接触">
+                </div>
+                <div class="guide-content">
+                    <span class="card-tag">食品工业</span>
+                    <h3>食品接触金属材料的安全标准与检测</h3>
+                    <p style="color:var(--text-secondary); margin-bottom:10px;">不锈钢制品在食品加工中的卫生标准，以及如何避免重金属迁移污染。</p>
+                    <a href="#" style="color:var(--accent-color); font-weight:600; font-size:14px;">阅读全文 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container" style="background-color: var(--bg-light); padding: 60px 20px;">
+        <div class="section-header">
+            <h2 class="section-title">常见问题解答</h2>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <details style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+                <summary style="cursor: pointer; font-weight: 600; font-size: 16px; list-style: none; display: flex; justify-content: space-between;">
+                    <span>如何判断金属材料的硬度？</span>
+                    <span style="color: var(--accent-color);">+</span>
+                </summary>
+                <p style="margin-top: 10px; color: var(--text-secondary);">常用的硬度测试方法包括布氏硬度（HB）、洛氏硬度（HRC）和维氏硬度（HV）。选择哪种方法取决于金属的厚度、硬度和测试精度要求。</p>
+            </details>
+            <details style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+                <summary style="cursor: pointer; font-weight: 600; font-size: 16px; list-style: none; display: flex; justify-content: space-between;">
+                    <span>不锈钢生锈了怎么办？</span>
+                    <span style="color: var(--accent-color);">+</span>
+                </summary>
+                <p style="margin-top: 10px; color: var(--text-secondary);">不锈钢并非绝对不生锈。轻微锈迹可用柠檬酸或专用除锈剂清除。如果是严重的腐蚀，可能需要重新抛光或更换材料。保持表面干燥清洁是预防关键。</p>
+            </details>
+            <details style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+                <summary style="cursor: pointer; font-weight: 600; font-size: 16px; list-style: none; display: flex; justify-content: space-between;">
+                    <span>碳钢和不锈钢的主要区别是什么？</span>
+                    <span style="color: var(--accent-color);">+</span>
+                </summary>
+                <p style="margin-top: 10px; color: var(--text-secondary);">主要区别在于含碳量和合金元素。碳钢含碳量高，硬度高但耐腐蚀性差；不锈钢含有铬、镍等合金元素，在表面形成致密的氧化膜，具有优异的耐腐蚀性。</p>
+            </details>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>关于金属大师</h4>
+            <p style="color: #bdc3c7; font-size: 14px; line-height: 1.8;">
+                金属大师致力于打造最专业的金属材料知识库与选型服务平台。我们连接工程师、采购商与科研机构，推动工业制造的技术进步。
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>快速导航</h4>
+            <ul>
+                <li><a href="#">材料分类</a></li>
+                <li><a href="#">加工工艺</a></li>
+                <li><a href="#">标准规范</a></li>
+                <li><a href="#">企业名录</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>资源下载</h4>
+            <ul>
+                <li><a href="#">材料手册PDF</a></li>
+                <li><a href="#">热处理参数表</a></li>
+                <li><a href="#">焊接技术规范</a></li>
+                <li><a href="#">行业白皮书</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>联系我们</h4>
+            <ul>
+                <li><a href="#">商务合作</a></li>
+                <li><a href="#">投稿建议</a></li>
+                <li><a href="#">技术支持</a></li>
+                <li><a href="#">加入我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 金属大师 MetalMaster. All Rights Reserved. 保留所有权利。</p>
+    </div>
+</footer>
+
+</body>
+                                          </html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="直立行走的狗专题页：探索犬类直立行走的科学原理、历史趣闻、医学风险及护理指南。了解不同品种的直立能力差异，以及直立行走对犬只健康的影响。">
+    <meta name="keywords" content="直立行走的狗, 犬类直立行走, 狗走路姿势, 狗站立, 犬类骨骼结构, 狗的医学风险">
+    <title>直立行走的狗-科学解析、健康风险与护理指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+        }
+
+        /* Articles Section */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+        }
+
+        article {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        article:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        article h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        article p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background-color: #fff8e1;
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #eee;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .sidebar-list li {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .sidebar-list li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-list a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .sidebar-list a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Medical Risk Section */
+        .risk-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 4rem;
+        }
+
+        .risk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .risk-item {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+        }
+
+        .risk-item h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .risk-item p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+            background-color: #fff;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #888;
+            padding: 3rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>🐾</span> 犬类行为实验室
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#anatomy">解剖与机制</a></li>
+                    <li><a href="#risks">健康风险</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>直立行走的狗</h1>
+            <p>探索犬类试图或能够直立行走的科学原理、潜在危害以及作为主人应如何正确引导。</p>
+        </div>
+    </section>
+
+    <main class="container main-grid">
+        <!-- Left Column: Articles -->
+        <div class="content-column">
+            <h2 class="section-title">核心解析</h2>
+            
+            <article id="anatomy">
+                <span class="tag">解剖学</span>
+                <h2>为什么狗有时会站立？</h2>
+                <p>狗的后肢天生具有比前肢更强的爆发力，这是为了在狩猎时进行跳跃和冲刺。当狗狗感到兴奋、想要够取高处食物，或者仅仅是为了模仿人类的行为时，它们会利用这一生理优势尝试站立。虽然它们的后肢肌肉力量足以支撑身体短暂站立，但它们的骨盆结构、脊柱曲度和重心分布与人类完全不同。</p>
+                <div class="highlight-box">
+                    <strong>关键点：</strong> 狗狗的直立行为通常源于本能的跳跃欲望或对食物的渴望，而非像人类那样拥有复杂的“行走”中枢控制。
+                </div>
+            </article>
+
+            <article>
+                <span class="tag">品种差异</span>
+                <h2>不同品种的直立能力</h2>
+                <p>并非所有犬种都能轻松地长时间直立。拥有更长后肢和更强后背肌肉的品种（如柴犬、秋田犬、柯基）通常比短腿品种更容易站立。柴犬尤其以喜欢站立和摆出“招财猫”姿势而闻名，这主要得益于它们强健的臀部肌肉和灵活的脊柱。</p>
+                <p>相比之下，法斗、巴哥等扁平脸犬种由于骨骼结构问题，极少能长时间直立，强行尝试可能会造成严重的关节损伤。</p>
+            </article>
+
+            <h2 class="section-title">健康警示</h2>
+            <article>
+                <span class="tag">医学风险</span>
+                <h2>长期直立行走对狗的伤害</h2>
+                <p>虽然看起很有趣，但长期强迫狗狗直立行走对它们的健康是极其不利的。首先，这违反了它们的自然生物力学。狗狗的膝盖骨（髌骨）结构特殊，直立姿势极易导致髌骨脱位。其次，脊柱承受的压力会急剧增加，可能引发椎间盘突出或腰肌劳损。此外，直立姿势还会压迫胸腔和内脏器官，影响呼吸和消化功能。</p>
+            </article>
+        </div>
+
+        <!-- Right Column: Sidebar -->
+        <aside>
+            <div class="sidebar-card">
+                <h3>热门话题</h3>
+                <ul class="sidebar-list">
+                    <li><a href="#">狗狗后腿站立训练指南</a></li>
+                    <li><a href="#">柯基为什么喜欢抬腿？</a></li>
+                    <li><a href="#">狗狗走路姿势异常检查</a></li>
+                    <li><a href="#">柴犬站立行为的心理分析</a></li>
+                    <li><a href="#">如何纠正狗狗的不良站姿</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>相关工具</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">了解您的狗狗是否适合特定运动。</p>
+                <a href="#" style="display: block; background: var(--accent-color); color: white; padding: 0.8rem; text-align: center; border-radius: 4px; font-weight: bold;">犬类运动风险评估表</a>
+            </div>
+        </aside>
+    </main>
+
+    <section class="risk-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white; border-color: white;">健康风险警示</h2>
+            <div class="risk-grid">
+                <div class="risk-item">
+                    <h3>脊椎损伤</h3>
+                    <p>狗的脊柱柔韧性有限，直立行走会改变正常的脊柱曲度，极易导致椎间盘突出或韧带拉伤。</p>
+                </div>
+                <div class="risk-item">
+                    <h3>关节磨损</h3>
+                    <p>肘部和髋关节承受了额外的压力，长期反复的直立可能导致退行性关节炎。</p>
+                </div>
+                <div class="risk-item">
+                    <h3>平衡失控</h3>
+                    <p>狗的前肢用于抓取和感知，直立后平衡感下降，容易摔倒或扭伤。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container faq-section" id="faq">
+        <h2 class="section-title">常见问题 (FAQ)</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">狗狗偶尔站立一下有害吗？</div>
+            <div class="faq-answer">偶尔站立通常是无害的，只要狗狗能够自如地回到四脚着地，且没有表现出疼痛或不适。但如果站立时间过长，应立即制止。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">如何训练狗狗直立？</div>
+            <div class="faq-answer">虽然可以通过诱导训练让狗狗站立，但我们不建议进行专门的直立训练。这可能会加重关节负担。如果狗狗是为了够食物而站立，建议将食物放在地上，避免诱导其做危险动作。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">为什么我的柴犬总是站着？</div>
+            <div class="faq-answer">柴犬站立是它们品种特征的一部分，通常是为了展示自信、观察周围环境或寻求关注。这通常是健康的，只要不影响其正常生活。</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 犬类行为实验室. 保留所有权利。</p>
+            <p>本站内容仅供科普参考，不构成医疗建议。如有狗狗行为或健康问题，请咨询专业兽医或训犬师。</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
